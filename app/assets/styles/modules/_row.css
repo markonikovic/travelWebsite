@@ -1,7 +1,60 @@
 .row {
 
+    &--equal-hight-at-medium {
+        @mixin atMedium {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+
+    &--equal-hight-at-large {
+        @mixin atLarge {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+
     &__b-margin-until-medium {
         margin-bottom: 1rem;
+    }
+
+    @mixin atLarge {
+
+        &_b-margin-until-large {
+            margin-bottom: 0;
+        }
+
+        &__large-4 {
+            float: left;
+            width: 33.3%;
+            
+            &--larger {
+                width: 37%;
+            }
+        }
+
+        &__large-8 {
+            float: left;
+            width: 66.3%;
+
+            &--smaller {
+                width: 63%;
+            }
+        }
+
+        &__large-6 {
+            float: left;
+            width: 50%;
+        }
+
     }
 
     @mixin atMedium {
@@ -32,17 +85,18 @@
             float: left;
             width: 50%;
         }
-
     }
 
     &--gutters {
         margin-right: -65px;
-        
-
     }
 
     &--gutters-large {
         margin-right: -100px;
+    }
+
+    &--gutters-small {
+        margin-right: -45px;
     }
 
     &--gutters > div {
@@ -51,6 +105,14 @@
 
     &--gutters-large > div {
         padding-right: 100px;
+    }
+
+    &--gutters-small > div {
+        padding-right: 45px;
+    }
+
+    &--t-padding {
+        padding-top: 80px;
     }
 
     @mixin clearfix;
